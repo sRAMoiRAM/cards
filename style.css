@@ -26,6 +26,7 @@ button {
     width: 300px;
     height: 200px;
     perspective: 1000px; /* This is the key for 3D perspective */
+    margin: 20;
 }
 
 .flip-card-inner {
