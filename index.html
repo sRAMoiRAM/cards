@@ -3,57 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Slider</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cards</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card-container">
-        <div class="flip-card" id="card-1">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h2>Question 1</h2>
-                    <p>What is the capital of France?</p>
-                </div>
-                <div class="flip-card-back">
-                    <h2>Answer</h2>
-                    <p>Paris</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="flip-card" id="card-2">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h2>Question 2</h2>
-                    <p>What is the largest planet in our solar system?</p>
-                </div>
-                <div class="flip-card-back">
-                    <h2>Answer</h2>
-                    <p>Jupiter</p>
-                </div>
+    <h1>Welcome to a new learning experience!</h1>
+    <button id="colorSwitcher">Don't touch!</button>
+    
+    <div class="flip-card">
+        <div class="flip-card-inner" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-front">
+                <h2>Question 1</h2>
+                <p>What is the capital of France?</p>
             </div>
-        </div>
-
-        <div class="flip-card" id="card-3">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h2>Question 3</h2>
-                    <p>What is the boiling point of water?</p>
-                </div>
-                <div class="flip-card-back">
-                    <h2>Answer</h2>
-                    <p>100°C</p>
-                </div>
+            <div class="flip-card-back">
+                <h2>Answer</h2>
+                <p>Paris</p>
             </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="nav-buttons">
-            <button id="prevBtn" onclick="showPreviousCard()">Previous</button>
-            <button id="nextBtn" onclick="showNextCard()">Next</button>
         </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
