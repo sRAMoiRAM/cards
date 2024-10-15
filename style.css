@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding-top: 50px;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
 }
 
 button {
@@ -15,8 +17,6 @@ button {
     width: 300px;
     height: 200px;
     perspective: 1000px; /* This is the key for 3D perspective */
-    justify-self: center;
-    align-self: center;
 }
 
 .flip-card-inner {
