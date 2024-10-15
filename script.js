@@ -1,17 +1,34 @@
-// Get the button element by its ID
-const button = document.getElementById('colorSwitcher');
+// JavaScript to control card navigation
+let currentCard = 1;
+const totalCards = document.querySelectorAll('.flip-card').length;
 
-// Define an array of colors to switch between
-const colors = ['#3498db', '#2ecc71', '#f1c40f', '#e74c3c', '#9b59b6'];
+document.getElementById('card-' + currentCard).classList.add('active');
 
-// Keep track of the current color index
-let currentColorIndex = 0;
+// Function to show the next card
+function showNextCard() {
+    if (currentCard < totalCards) {
+        document.getElementById('card-' + currentCard).classList.remove('active');
+        currentCard++;
+        document.getElementById('card-' + currentCard).classList.add('active');
+    }
+    updateButtons();
+}
 
-// Add an event listener to the button
-button.addEventListener('click', function() {
-    // Change the background color of the body
-    document.body.style.backgroundColor = colors[currentColorIndex];
-    
-    // Increment the color index, loop back to the start if at the end
-    currentColorIndex = (currentColorIndex + 1) % colors.length;
-});
+// Function to show the previous card
+function showPreviousCard() {
+    if (currentCard > 1) {
+        document.getElementById('card-' + currentCard).classList.remove('active');
+        currentCard--;
+        document.getElementById('card-' + currentCard).classList.add('active');
+    }
+    updateButtons();
+}
+
+// Function to enable/disable buttons based on current card
+function updateButtons() {
+    document.getElementById('prevBtn').disabled = currentCard === 1;
+    document.getElementById('nextBtn').disabled = currentCard === totalCards;
+}
+
+// Initialize button states on load
+updateButtons();
