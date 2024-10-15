@@ -18,33 +18,27 @@ button.addEventListener('click', function() {
 
 // Get the dynamic content elements
 const dynamicHeading = document.getElementById('dynamic-heading');
-const dynamicContent = document.getElementById('dynamic-content');
 
 // Define content for each menu item
 const contentMap = {
     home: {
         heading: "Welcome to My Website",
-        content: "This is the home page of the website."
     },
     about: {
         heading: "About Us",
-        content: "Learn more about our mission, vision, and values."
     },
     services: {
         heading: "Our Services",
-        content: "We offer a range of services to meet your needs."
     },
     contact: {
         heading: "Contact Us",
-        content: "Get in touch with us for more information."
     }
 };
 
 // Function to update the content dynamically
 function updateContent(section) {
-    const { heading, content } = contentMap[section];
+    const { heading } = contentMap[section];
     dynamicHeading.textContent = heading;
-    dynamicContent.textContent = content;
 }
 
 // Add event listeners to each menu item
