@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding-top: 50px;
+    display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
 }
