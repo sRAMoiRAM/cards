@@ -10,18 +10,13 @@ button {
     cursor: pointer;
 }
 
-card {
-    padding: 10;
-    border: 2 black;
-    border-radius: 8;
-    background-color: darkgray;
-}
-
 .flip-card {
     background-color: transparent;
     width: 300px;
     height: 200px;
     perspective: 1000px; /* This is the key for 3D perspective */
+    justify-self: center;
+    align-self: center;
 }
 
 .flip-card-inner {
@@ -31,7 +26,7 @@ card {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    cursor: pointer;
+    cursor: grab;
 }
 
 .flip-card-inner.flipped {
