@@ -15,3 +15,40 @@ button.addEventListener('click', function() {
     // Increment the color index, loop back to the start if at the end
     currentColorIndex = (currentColorIndex + 1) % colors.length;
 });
+
+// Get the dynamic content elements
+const dynamicHeading = document.getElementById('dynamic-heading');
+const dynamicContent = document.getElementById('dynamic-content');
+
+// Define content for each menu item
+const contentMap = {
+    home: {
+        heading: "Welcome to My Website",
+        content: "This is the home page of the website."
+    },
+    about: {
+        heading: "About Us",
+        content: "Learn more about our mission, vision, and values."
+    },
+    services: {
+        heading: "Our Services",
+        content: "We offer a range of services to meet your needs."
+    },
+    contact: {
+        heading: "Contact Us",
+        content: "Get in touch with us for more information."
+    }
+};
+
+// Function to update the content dynamically
+function updateContent(section) {
+    const { heading, content } = contentMap[section];
+    dynamicHeading.textContent = heading;
+    dynamicContent.textContent = content;
+}
+
+// Add event listeners to each menu item
+document.getElementById('home-link').addEventListener('click', () => updateContent('home'));
+document.getElementById('about-link').addEventListener('click', () => updateContent('about'));
+document.getElementById('services-link').addEventListener('click', () => updateContent('services'));
+document.getElementById('contact-link').addEventListener('click', () => updateContent('contact'));
