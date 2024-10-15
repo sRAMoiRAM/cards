@@ -26,6 +26,7 @@ button {
     width: 300px;
     height: 200px;
     perspective: 1000px; /* This is the key for 3D perspective */
+    margin: 20px; /* Optional for spacing */
 }
 
 .flip-card-inner {
@@ -33,9 +34,9 @@ button {
     width: 100%;
     height: 100%;
     text-align: center;
-    transform-origin: center; /* Ensure the flip happens around the center */
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    transform-origin: center; /* Ensure the flip happens around the center */
     cursor: grab;
 }
 
