@@ -19,6 +19,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px;
 }
 
 .flip-card {
@@ -33,7 +34,6 @@ button {
     width: 100%;
     height: 100%;
     text-align: center;
-    transform-origin: center; /* Ensure the flip happens around the center */
     transition: transform 0.8s;
     transform-style: preserve-3d;
     cursor: grab;
