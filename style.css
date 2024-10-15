@@ -62,6 +62,7 @@ button {
 .flip-card-front {
     background-color: #fafafa;
     color: black;
+    transform: rotateY(0deg); /* Front side remains at 0 degrees */
 }
 
 .flip-card-back {
